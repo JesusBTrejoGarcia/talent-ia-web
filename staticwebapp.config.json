@@ -1,0 +1,15 @@
+{
+  "routes": [
+    {
+      "route": "/*",
+      "redirect": "https://talent-ia.com{url}",
+      "statusCode": 301,
+      "headers": {
+        "host": "www.talent-ia.com"
+      }
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  }
+}
