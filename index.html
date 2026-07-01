@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-    <link rel="canonical" href="https://talent-ia.com/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talent-ia | Tecnología que acorta distancias</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +11,6 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
-
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(15,31,61,0.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(200,169,110,0.18);}
@@ -26,7 +24,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:.55rem 1.4rem;border-radius:2px;font-weight:600!important;}
 .nav-cta:hover{background:var(--gold-light)!important;}
 
-
 /* HERO */
 .hero{min-height:100vh;background:var(--navy);position:relative;display:flex;align-items:center;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 75% 45%,rgba(200,169,110,.09) 0%,transparent 65%),radial-gradient(ellipse 40% 50% at 15% 75%,rgba(200,169,110,.05) 0%,transparent 55%);}
@@ -37,3 +34,322 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.8rem,4.8vw,4.2rem);color:#fff;line-height:1.08;letter-spacing:-.025em;margin-bottom:1.5rem;}
 .hero h1 em{font-style:italic;color:var(--gold);}
 .hero-desc{color:rgba(255,255,255,.62);font-size:1.05rem;line-height:1.8;margin-bottom:2.5rem;max-width:460px;}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-primary{background:var(--gold);color:var(--navy);padding:.85rem 2rem;border-radius:2px;font-weight:600;font-size:.88rem;letter-spacing:.03em;text-decoration:none;transition:all .3s;border:2px solid var(--gold);display:inline-block;}
+.btn-primary:hover{background:transparent;color:var(--gold);}
+.btn-outline{background:transparent;color:#fff;padding:.85rem 2rem;border-radius:2px;font-weight:500;font-size:.88rem;text-decoration:none;border:1px solid rgba(255,255,255,.28);transition:all .3s;display:inline-block;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+.hero-right{display:flex;flex-direction:column;gap:1rem;}
+.hero-card{background:rgba(255,255,255,.04);border:1px solid rgba(200,169,110,.18);border-left:3px solid var(--gold);padding:1.3rem 1.5rem;transition:background .3s;}
+.hero-card:hover{background:rgba(200,169,110,.06);}
+.hero-card-label{font-size:.72rem;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.35rem;}
+.hero-card p{color:rgba(255,255,255,.78);font-size:.92rem;line-height:1.55;}
+
+/* SHARED */
+section{padding:7rem 4rem;}
+.container{max-width:1100px;margin:0 auto;}
+.section-tag{display:inline-flex;align-items:center;gap:.55rem;color:var(--gold);font-size:.72rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;margin-bottom:.9rem;}
+.section-tag::before{content:'';width:18px;height:1px;background:var(--gold);}
+h2{font-family:'DM Serif Display',serif;font-size:clamp(2rem,3.2vw,2.9rem);color:var(--navy);line-height:1.15;letter-spacing:-.02em;margin-bottom:1.1rem;}
+.intro-text{font-size:1rem;color:var(--text-light);line-height:1.8;max-width:560px;}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,.3),transparent);}
+
+/* QUIÉNES SOMOS */
+.nosotros{background:var(--white);}
+.nosotros-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;margin-top:4rem;}
+.nosotros-text p{color:var(--text-light);line-height:1.85;margin-bottom:1.2rem;font-size:.97rem;}
+.nosotros-text strong{color:var(--navy);}
+.nosotros-visual{display:flex;flex-direction:column;gap:1.5rem;}
+.nos-item{display:flex;gap:1.2rem;align-items:flex-start;padding:1.4rem;background:var(--cream);border-left:3px solid var(--gold);}
+.nos-item-icon{font-size:1.3rem;margin-top:.1rem;}
+.nos-item h4{font-size:.9rem;font-weight:600;color:var(--navy);margin-bottom:.25rem;}
+.nos-item p{font-size:.85rem;color:var(--text-light);line-height:1.6;}
+
+/* SERVICIOS */
+.servicios{background:var(--cream);}
+.servicios-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:3rem;margin-bottom:4rem;flex-wrap:wrap;}
+.servicios-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.srv-card{background:var(--white);padding:2.2rem;border-bottom:3px solid transparent;transition:all .3s;}
+.srv-card:hover{border-bottom-color:var(--gold);transform:translateY(-5px);box-shadow:0 20px 40px rgba(15,31,61,.07);}
+.srv-icon{width:40px;height:40px;background:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:1.3rem;font-size:1rem;}
+.srv-card h3{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--navy);margin-bottom:.7rem;line-height:1.3;}
+.srv-card p{color:var(--text-light);font-size:.87rem;line-height:1.72;}
+
+/* TERRITORIO */
+.territorio{background:var(--navy);position:relative;overflow:hidden;}
+.territorio::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 80% 50%,rgba(200,169,110,.08) 0%,transparent 60%);}
+.territorio-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;position:relative;z-index:2;}
+.territorio h2{color:#fff;}
+.territorio .intro-text{color:rgba(255,255,255,.62);}
+.territorio-body p{color:rgba(255,255,255,.65);line-height:1.85;margin-bottom:1.1rem;font-size:.97rem;}
+.territorio-list{display:flex;flex-direction:column;gap:.8rem;margin-top:1.5rem;}
+.t-item{display:flex;gap:.9rem;align-items:flex-start;padding:1rem 1.2rem;border:1px solid rgba(200,169,110,.15);background:rgba(255,255,255,.03);}
+.t-item-arrow{color:var(--gold);font-weight:600;margin-top:.05rem;}
+.t-item p{font-size:.87rem;color:rgba(255,255,255,.68);line-height:1.55;}
+.t-item strong{color:rgba(255,255,255,.9);}
+.territorio-quote{background:rgba(255,255,255,.04);border:1px solid rgba(200,169,110,.2);padding:2.8rem;position:relative;}
+.territorio-quote::before{content:'"';font-family:'DM Serif Display',serif;font-size:7rem;color:rgba(200,169,110,.15);position:absolute;top:-1.5rem;left:1.5rem;line-height:1;}
+.territorio-quote blockquote{font-family:'DM Serif Display',serif;font-size:1.3rem;font-style:italic;color:#fff;line-height:1.6;position:relative;z-index:1;margin-bottom:1.2rem;}
+.territorio-quote cite{font-size:.75rem;color:var(--gold);font-style:normal;font-weight:600;letter-spacing:.1em;text-transform:uppercase;}
+
+/* CONTACTO */
+.contacto{background:var(--cream);text-align:center;}
+.contacto h2{margin-bottom:1rem;}
+.contacto .intro-text{margin:0 auto 2.5rem;text-align:center;}
+.contacto-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.contacto-note{margin-top:1.5rem;font-size:.82rem;color:var(--gray);}
+
+/* FOOTER */
+footer{background:#08142A;padding:3rem 4rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(200,169,110,.12);flex-wrap:wrap;gap:1.5rem;}
+.footer-brand{display:flex;align-items:center;gap:.6rem;}
+.footer-brand svg{height:26px;width:auto;}
+.footer-brand-text{font-family:'DM Serif Display',serif;font-size:1.25rem;color:#fff;}
+.footer-brand-text span{color:var(--gold);font-style:italic;}
+.footer-meta{font-size:.78rem;color:rgba(255,255,255,.32);line-height:1.75;text-align:right;}
+.footer-meta a{color:var(--gold);text-decoration:none;}
+
+/* ANIM */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.hero-content>*{animation:fadeUp .7s ease both;}
+.hero-content>*:nth-child(2){animation-delay:.12s;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem;}
+  .nav-links{display:none;}
+  section{padding:5rem 1.5rem;}
+  .hero-content,.nosotros-grid,.servicios-grid,.territorio-grid{grid-template-columns:1fr;gap:3rem;}
+  .hero-content{padding:8rem 1.5rem 4rem;}
+  .servicios-intro{flex-direction:column;align-items:flex-start;}
+  footer{padding:2rem 1.5rem;flex-direction:column;align-items:flex-start;}
+  .footer-meta{text-align:left;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(12,30)">
+        <polygon points="-20,3 -8,1 -8,7" fill="#C8A96E" opacity="0.55"/>
+        <polygon points="-20,-3 -8,-1 -8,-7" fill="#C8A96E" opacity="0.4"/>
+        <polygon points="-5,-16 12,-4 -1,2" fill="#C8A96E" opacity="0.75"/>
+        <polygon points="-3,-11 7,-3 -1,1" fill="#C8A96E" opacity="0.4"/>
+        <ellipse cx="4" cy="0" rx="14" ry="6" fill="#C8A96E"/>
+        <ellipse cx="7" cy="1.5" rx="8" ry="4" fill="#DFC08A" opacity="0.55"/>
+        <circle cx="17" cy="-3" r="5" fill="#C8A96E"/>
+        <circle cx="19" cy="-4" r="1.2" fill="#0F1F3D"/>
+        <line x1="21" y1="-4" x2="38" y2="-7" stroke="#C8A96E" stroke-width="1.5" stroke-linecap="round"/>
+      </g>
+    </svg>
+    <span class="nav-logo-text">Talent<span>-ia</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#territorio">Territorio</a></li>
+    <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-tag">Navaluenga, Ávila &nbsp;·&nbsp; Madrid</div>
+      <h1>Tecnología que<br><em>acorta distancias</em></h1>
+      <p class="hero-desc">Llevamos la Inteligencia Artificial al territorio. Somos el socio tecnológico de empresas y emprendedores que quieren competir sin importar dónde están.</p>
+      <div class="hero-actions">
+        <a href="#servicios" class="btn-primary">Qué hacemos</a>
+        <a href="#contacto" class="btn-outline">Habla con nosotros</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="hero-card-label">IA Aplicada</div>
+        <p>Formación y consultoría en IA para directivos y pymes. Resultados desde el primer día, sin tecnicismos.</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-label">Automatización</div>
+        <p>Procesos automatizados con Claude, Copilot y Power Platform. Tu equipo hace más con menos esfuerzo.</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-label">Territorio Rural</div>
+        <p>Tecnología adaptada a la realidad de los negocios rurales. Presupuestos ajustados, resultados concretos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- QUIÉNES SOMOS -->
+<section class="nosotros" id="nosotros">
+  <div class="container">
+    <div class="section-tag">Quiénes somos</div>
+    <h2>Una empresa tecnológica<br>con los pies en el territorio</h2>
+    <div class="nosotros-grid">
+      <div class="nosotros-text">
+        <p><strong>Talent-ia</strong> es una consultora tecnológica especializada en Inteligencia Artificial aplicada al negocio. Operamos desde Madrid y desde Navaluenga, en el Valle del Alberche, porque creemos que la tecnología no debería tener fronteras geográficas.</p>
+        <p>Trabajamos con <strong>Claude (Anthropic)</strong>, el ecosistema <strong>Microsoft 365</strong> y las herramientas de IA más avanzadas para transformar cómo los equipos trabajan, deciden y se comunican — en una empresa de Madrid o en un negocio de Ávila.</p>
+        <p>No vendemos tecnología por vender. Entendemos el negocio primero, y después elegimos las herramientas. Esa es la diferencia entre una consultoría que promete y una que entrega.</p>
+      </div>
+      <div class="nosotros-visual">
+        <div class="nos-item">
+          <div class="nos-item-icon">🎯</div>
+          <div>
+            <h4>Resultados desde el primer día</h4>
+            <p>Sin proyectos piloto interminables. Implantamos soluciones que funcionan en producción desde la primera semana.</p>
+          </div>
+        </div>
+        <div class="nos-item">
+          <div class="nos-item-icon">🤝</div>
+          <div>
+            <h4>Sin tecnicismos</h4>
+            <p>Hablamos el idioma del negocio, no el de la tecnología. Tu equipo entiende qué hace la IA y por qué.</p>
+          </div>
+        </div>
+        <div class="nos-item">
+          <div class="nos-item-icon">🌍</div>
+          <div>
+            <h4>Comprometidos con el territorio</h4>
+            <p>Con base en Navaluenga y Madrid. La brecha digital entre ciudad y pueblo no es inevitable — estamos aquí para cerrarla.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVICIOS -->
+<section class="servicios" id="servicios">
+  <div class="container">
+    <div class="servicios-intro">
+      <div>
+        <div class="section-tag">Qué hacemos</div>
+        <h2>IA que funciona<br>en el mundo real</h2>
+      </div>
+      <p class="intro-text">Soluciones concretas y medibles, adaptadas a tu realidad — ya seas una pyme en Madrid o un emprendedor en la sierra de Ávila.</p>
+    </div>
+    <div class="servicios-grid">
+      <div class="srv-card">
+        <div class="srv-icon">🧠</div>
+        <h3>Formación en IA para directivos y equipos</h3>
+        <p>Talleres prácticos presenciales o remotos. Tu equipo aprende a usar IA en su trabajo diario desde la primera sesión. Sin teoría innecesaria, con casos reales de tu sector.</p>
+      </div>
+      <div class="srv-card">
+        <div class="srv-icon">⚙️</div>
+        <h3>Automatización de procesos con IA generativa</h3>
+        <p>Identificamos los procesos repetitivos de tu empresa y los automatizamos con Claude, Copilot y Power Automate. Más tiempo para lo que importa, menos errores, más velocidad.</p>
+      </div>
+      <div class="srv-card">
+        <div class="srv-icon">🔗</div>
+        <h3>Integración de IA en Microsoft 365</h3>
+        <p>Si ya usas Teams, Outlook, SharePoint o Power Platform, conectamos IA generativa en esos flujos sin cambiar lo que ya funciona en tu empresa.</p>
+      </div>
+      <div class="srv-card">
+        <div class="srv-icon">🗺️</div>
+        <h3>Estrategia de adopción de IA para PYME</h3>
+        <p>Un plan realista: qué herramientas, en qué orden, con qué inversión. Sin desperdicio, sin proyectos que nunca llegan a producción.</p>
+      </div>
+      <div class="srv-card">
+        <div class="srv-icon">🌾</div>
+        <h3>Tecnología para el emprendimiento rural</h3>
+        <p>Acompañamos a negocios rurales en su transformación digital: desde la presencia online hasta la automatización de operaciones con IA, con presupuestos ajustados a la realidad del territorio.</p>
+      </div>
+      <div class="srv-card">
+        <div class="srv-icon">📊</div>
+        <h3>Analítica e inteligencia de negocio</h3>
+        <p>Convertimos los datos que ya tienes en decisiones. Dashboards, informes automáticos y análisis con IA para que sepas siempre qué está pasando en tu negocio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TERRITORIO -->
+<section class="territorio" id="territorio">
+  <div class="container">
+    <div class="territorio-grid">
+      <div class="territorio-body">
+        <div class="section-tag" style="color:var(--gold-light)">Para el territorio</div>
+        <h2>La IA no entiende<br>de kilómetros</h2>
+        <p>Un negocio en Navaluenga puede automatizar sus presupuestos, atender clientes por WhatsApp con IA y gestionar su agenda con las mismas herramientas que usa una empresa de Madrid.</p>
+        <p>La diferencia no está en la tecnología. Está en el acceso al conocimiento. Y eso es exactamente lo que Talent-ia pone al alcance de cualquier emprendedor, esté donde esté.</p>
+        <div class="territorio-list">
+          <div class="t-item">
+            <div class="t-item-arrow">▸</div>
+            <p><strong>Atención al cliente con IA</strong> — chatbots para WhatsApp, web y teléfono que responden solos.</p>
+          </div>
+          <div class="t-item">
+            <div class="t-item-arrow">▸</div>
+            <p><strong>Gestión automatizada</strong> — reservas, agenda y presupuestos sin necesidad de personal dedicado.</p>
+          </div>
+          <div class="t-item">
+            <div class="t-item-arrow">▸</div>
+            <p><strong>Presencia digital inteligente</strong> — web, contenido y redes sociales gestionados con IA.</p>
+          </div>
+          <div class="t-item">
+            <div class="t-item-arrow">▸</div>
+            <p><strong>Formación in situ</strong> — talleres en tu propio negocio, con tus propios casos reales.</p>
+          </div>
+        </div>
+      </div>
+      <div class="territorio-quote">
+        <blockquote>Un pueblo con buena tecnología no tiene que envidiar nada a una capital. Solo necesita el socio adecuado.</blockquote>
+        <cite>Jesús Trejo · Fundador, Talent-ia</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+  <div class="container">
+    <div class="section-tag" style="justify-content:center;">Contacto</div>
+    <h2>¿Empezamos?</h2>
+    <p class="intro-text">Tanto si eres un directivo de PYME en Madrid como si tienes un negocio en la sierra de Ávila, te ayudamos a dar el primer paso con IA — concreto, sin rodeos y con resultados.</p>
+    <div class="contacto-actions">
+      <a href="mailto:hola@talent-ia.com" class="btn-primary">hola@talent-ia.com</a>
+      <a href="https://www.linkedin.com/in/jesustrejogarcia/" target="_blank" class="btn-outline">LinkedIn</a>
+    </div>
+    <p class="contacto-note">Navaluenga, Ávila &nbsp;·&nbsp; Madrid &nbsp;·&nbsp; Atención presencial o remota</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(12,30)">
+        <polygon points="-20,3 -8,1 -8,7" fill="#C8A96E" opacity="0.55"/>
+        <polygon points="-20,-3 -8,-1 -8,-7" fill="#C8A96E" opacity="0.4"/>
+        <polygon points="-5,-16 12,-4 -1,2" fill="#C8A96E" opacity="0.75"/>
+        <polygon points="-3,-11 7,-3 -1,1" fill="#C8A96E" opacity="0.4"/>
+        <ellipse cx="4" cy="0" rx="14" ry="6" fill="#C8A96E"/>
+        <ellipse cx="7" cy="1.5" rx="8" ry="4" fill="#DFC08A" opacity="0.55"/>
+        <circle cx="17" cy="-3" r="5" fill="#C8A96E"/>
+        <circle cx="19" cy="-4" r="1.2" fill="#0F1F3D"/>
+        <line x1="21" y1="-4" x2="38" y2="-7" stroke="#C8A96E" stroke-width="1.5" stroke-linecap="round"/>
+      </g>
+    </svg>
+    <span class="footer-brand-text">Talent<span>-ia</span></span>
+  </div>
+  <div class="footer-meta">
+    TALENT IASENSE SRL &nbsp;·&nbsp; NIF B75992127<br>
+    Navaluenga, Ávila &nbsp;·&nbsp; Madrid<br>
+    <a href="mailto:hola@talent-ia.com">hola@talent-ia.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
